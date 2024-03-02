@@ -233,26 +233,23 @@ namespace CheckPrintingSoftware
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Get values from text boxes and date picker
             string payTo = textBox2.Text;
             string sumOfTaka = textBox3.Text;
             string amount = textBox5.Text;
             DateTime date = dateTimePicker2.Value;
 
-            // Load the Crystal Report
-            ReportDocument reportDocument = new ReportDocument();
-            reportDocument.Load("C:\\Users\\Saruf Ratul\\Downloads\\Compressed\\CheckPrintingSoftware\\CheckPrintingSoftware\\Report\\cheque_print.rpt");
+            //// Set parameter values
+            //reportDocument.SetParameterValue("payTo", payTo);
+            //reportDocument.SetParameterValue("sumOfTaka", sumOfTaka);
+            //reportDocument.SetParameterValue("amount", amount);
+            //reportDocument.SetParameterValue("date", date);
 
-            // Set parameter values
-            reportDocument.SetParameterValue("payTo", payTo);
-            reportDocument.SetParameterValue("sumOfTaka", sumOfTaka);
-            reportDocument.SetParameterValue("amount", amount);
-            reportDocument.SetParameterValue("date", date);
+            //// Show the Crystal Report
+            //crystalReportViewerCheque_Print crystalReportViewerForm = new crystalReportViewerCheque_Print();
+            ////crystalReportViewerForm.crystalReportViewer.ReportSource = reportDocument;
+            //crystalReportViewerForm.Show();
 
-            // Show the Crystal Report
-            crystalReportViewerCheque_Print crystalReportViewerForm = new crystalReportViewerCheque_Print();
-            //crystalReportViewerForm.crystalReportViewer.ReportSource = reportDocument;
-            crystalReportViewerForm.Show();
+            MessageBox.Show("Successfully");
 
         }
     }
