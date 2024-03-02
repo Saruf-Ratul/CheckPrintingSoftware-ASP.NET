@@ -21,8 +21,13 @@ namespace CheckPrintingSoftware.Report
 
         private void crystalReportViewerCheque_Print_Load(object sender, EventArgs e)
         {
-            
+
+            //this.reportViewer1.RefreshReport();
         }
 
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
